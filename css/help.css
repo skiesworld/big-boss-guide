@@ -1,0 +1,516 @@
+/*全局*/
+
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*预加载动画*/
+
+/*#loading {*/
+/*    background-color: #374140;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    position: fixed;*/
+/*    z-index: 1;*/
+/*    margin-top: 0px;*/
+/*    top: 0px;*/
+/*}*/
+
+/*#loading-center {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: relative;*/
+/*}*/
+
+/*#loading-center-absolute {*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+/*    height: 150px;*/
+/*    width: 150px;*/
+/*    margin-top: -75px;*/
+/*    margin-left: -75px;*/
+/*}*/
+
+/*.object {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    background-color: #FFF;*/
+/*    float: left;*/
+/*    margin-right: 20px;*/
+/*    margin-top: 65px;*/
+/*    -moz-border-radius: 50% 50% 50% 50%;*/
+/*    -webkit-border-radius: 50% 50% 50% 50%;*/
+/*    border-radius: 50% 50% 50% 50%;*/
+/*}*/
+
+/*#object_one {*/
+/*    -webkit-animation: object_one 1.5s infinite;*/
+/*    animation: object_one 1.5s infinite;*/
+/*}*/
+
+/*#object_two {*/
+/*    -webkit-animation: object_two 1.5s infinite;*/
+/*    animation: object_two 1.5s infinite;*/
+/*    -webkit-animation-delay: 0.25s;*/
+/*    animation-delay: 0.25s;*/
+/*}*/
+
+/*#object_three {*/
+/*    -webkit-animation: object_three 1.5s infinite;*/
+/*    animation: object_three 1.5s infinite;*/
+/*    -webkit-animation-delay: 0.5s;*/
+/*    animation-delay: 0.5s;*/
+/*}*/
+
+/*@-webkit-keyframes object_one {*/
+/*    75% {*/
+/*        -webkit-transform: scale(0);*/
+/*    }*/
+/*}*/
+
+/*@keyframes object_one {*/
+/*    75% {*/
+/*        transform: scale(0);*/
+/*        -webkit-transform: scale(0);*/
+/*    }*/
+/*}*/
+
+/*@-webkit-keyframes object_two {*/
+/*    75% {*/
+/*        -webkit-transform: scale(0);*/
+/*    }*/
+/*}*/
+
+/*@keyframes object_two {*/
+/*    75% {*/
+/*        transform: scale(0);*/
+/*        -webkit-transform: scale(0);*/
+/*    }*/
+/*}*/
+
+/*@-webkit-keyframes object_three {*/
+/*    75% {*/
+/*        -webkit-transform: scale(0);*/
+/*    }*/
+/*}*/
+
+/*@keyframes object_three {*/
+/*    75% {*/
+/*        transform: scale(0);*/
+/*        -webkit-transform: scale(0);*/
+/*    }*/
+/*}*/
+
+
+/*字体*/
+
+awa {
+    background-color: #eef7f2;
+}
+
+awa a {
+    color: black;
+}
+
+li {
+    text-align: left;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 30px 0 0;
+}
+
+p {
+    text-align: left;
+    font-size: 22px;
+    line-height: 35px;
+    padding: 0 30px 0px 30px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+h3 {
+    margin: 30px 0;
+    font-size: 500%;
+    font-weight: 500;
+    color: inherit;
+    line-height: 80px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: 400;
+    color: inherit;
+    line-height: 45px;
+}
+
+h5 {
+    font-weight: 400;
+    color: inherit;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-indent: 200px;
+}
+
+.fade-in-words {
+    margin: 0 auto;
+}
+
+
+/*自定义一个透明度从0到1的动画，它的名称是fade-in*/
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.first-words {
+    opacity: 0;
+    /*实先规定文字的状态是不显示的*/
+    animation: fade-in 4s ease 0s 1;
+    /*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
+    -webkit-animation: fade-in 4s ease 0s 1;
+    -moz-animation: fade-in 4s ease 0s 1;
+    -o-animation: fade-in 4s ease 0s 1;
+    -ms-animation: fade-in 4s ease 0s 1;
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.second-words {
+    opacity: 0;
+    animation: fade-in 4s ease 2s 1;
+    -webkit-animation: fade-in 4s ease 2s 1;
+    -moz-animation: fade-in 4s ease 2s 1;
+    -o-animation: fade-in 4s ease 2s 1;
+    -ms-animation: fade-in 4s ease 2s 1;
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.third-words {
+    opacity: 0;
+    animation: fade-in 4s ease 4s 1;
+    -webkit-animation: fade-in 4s ease 4s 1;
+    -moz-animation: fade-in 4s ease 4s 1;
+    -o-animation: fade-in 4s ease 4s 1;
+    -ms-animation: fade-in 4s ease 4s 1;
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.four-words {
+    opacity: 0;
+    animation: fade-in 4s ease 6s 1;
+    -webkit-animation: fade-in 4s ease 6s 1;
+    -moz-animation: fade-in 4s ease 6s 1;
+    -o-animation: fade-in 4s ease 6s 1;
+    -ms-animation: fade-in 4s ease 6s 1;
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.five-words {
+    opacity: 0;
+    animation: fade-in 4s ease 8s 1;
+    -webkit-animation: fade-in 4s ease 8s 1;
+    -moz-animation: fade-in 4s ease 8s 1;
+    -o-animation: fade-in 4s ease 8s 1;
+    -ms-animation: fade-in 4s ease 8s 1;
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.six-words {
+    opacity: 0;
+    animation: fade-in 4s ease 10s 1;
+    -webkit-animation: fade-in 4s ease 10s 1;
+    -moz-animation: fade-in 4s ease 10s 1;
+    -o-animation: fade-in 4s ease 10s 1;
+    -ms-animation: fade-in 4s ease 10s 1;
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+/*标题*/
+
+header {
+    background: url('../images/background-PC.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    color: #eef7f2;
+} 
+@media (min-width: 3000px) {
+    header {
+    background-size:100% 2000px;
+    padding: 800px 0 800px 0;
+  }
+}
+@media (max-width: 1920px) {
+    header {
+    background-size:100% 700px;
+    padding: 200px 0 200px 0;
+  }
+}
+@media (min-width:1921px) and (max-width:2999px) {
+    header {
+    background-size:100% 1000px;
+    padding: 400px 0 400px 0;
+  }
+}
+
+/*主体*/
+
+body {
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+    background-color: #eef7f2;
+}
+
+
+/*页脚*/
+
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+footer p {
+    color: #999;
+}
+
+
+/*版权*/
+
+.copyrights {
+    text-indent: -9999px;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/*链接*/
+
+a {
+    -webkit-transition: all ease 150ms;
+    -moz-transition: all ease 150ms;
+    -o-transition: all ease 150ms;
+    transition: all ease 150ms;
+    text-decoration: none;
+    color: #2177b8;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #93b5cf;
+}
+
+a:active {
+    color: #47b5e2;
+}
+
+nav {
+    width: 100%;
+}
+
+nav a {
+    -webkit-transition: all ease 150ms;
+    -moz-transition: all ease 150ms;
+    -o-transition: all ease 150ms;
+    transition: all ease 150ms;
+    text-decoration: none;
+    color: RGBA(248, 244, 237, 0.6);
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #eef7f2;
+}
+
+nav a:active {
+    color: #eef7f2;
+}
+
+.link a:before,
+.link a:after {
+    content: '';
+    border-bottom: solid 2px white;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+}
+
+.link a:before {
+    left: 0;
+}
+
+.link a:after {
+    right: 0;
+}
+
+.link a:hover:before,
+.link a:hover:after {
+    width: 50%;
+}
+
+.link a:before,
+.link a:after {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+
+/*媒体*/
+
+img {
+    margin-right: 30px;
+}
+
+.enlargeImg_wrapper {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(52, 52, 52, 0.8);
+    background-size: 80%;
+}
+
+.enlargeImg_wrapper:hover {
+    cursor: zoom-out;
+}
+
+
+/*容器样式*/
+
+section {
+    padding: 1em 0 3em;
+}
+
+.vibrant {
+    background: #222;
+    color: #fff;
+}
+
+.centered {
+    text-align: left;
+}
+
+/*图片放大*/
+
+.over {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.tempContainer {
+    position: fixed;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: center;
+    z-index: 101;
+}
+
+
+@media (max-width:1024px) {
+  p {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  h4 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  li {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  nav a{
+    font-size: 21px;
+  }
+}
